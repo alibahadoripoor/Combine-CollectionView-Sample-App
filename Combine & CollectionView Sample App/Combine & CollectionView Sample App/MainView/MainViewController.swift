@@ -9,8 +9,6 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    static let sectionHeaderElementKind = "section-header-element-kind"
-    
     // MARK: - typealiases
     
     typealias DataSource = UICollectionViewDiffableDataSource<SectionViewModel, TodoCellViewModel>
@@ -18,12 +16,13 @@ final class MainViewController: UIViewController {
     
     // MARK: - Properties
     
+    static let sectionHeaderElementKind = "section-header-element-kind"
     var viewModel: MainViewModel!
     private var collectionView: UICollectionView!
     private var dataSource: DataSource!
     private var snapshot: DataSourceSnapshot!
     
-    //MARK: - View Lifecycle
+    //MARK: - View Lifecycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,7 @@ final class MainViewController: UIViewController {
 
 extension MainViewController {
     
-    //MARK: - Collection View Setup
+    //MARK: - Collection View Setups
     
     private func createLayout() -> UICollectionViewLayout {
         

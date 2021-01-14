@@ -9,7 +9,7 @@ import UIKit
 
 final class TodoCell: UICollectionViewCell {
     
-    static let reuseIdentifier = "TodoCell"
+    //MARK: - Outlets
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
@@ -20,6 +20,9 @@ final class TodoCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Properties
+    
+    static let reuseIdentifier = "TodoCell"
     var viewModel: TodoCellViewModel?{
         didSet{
             guard let viewModel = viewModel else { return }

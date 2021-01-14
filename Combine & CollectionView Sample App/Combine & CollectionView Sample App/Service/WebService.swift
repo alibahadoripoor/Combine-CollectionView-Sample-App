@@ -10,12 +10,16 @@ import Combine
 
 final class WebService{
     
+    // MARK: - Properties
+    
     private var urlComponents: URLComponents = {
         var urlBuilder = URLComponents()
         urlBuilder.scheme = EndPoints.scheme
         urlBuilder.host = EndPoints.host
         return urlBuilder
     }()
+    
+    //MARK: - Fetching Data Functions
     
     func fetchUsers() -> AnyPublisher<[User], Error> {
         urlComponents.path = EndPoints.usersPath

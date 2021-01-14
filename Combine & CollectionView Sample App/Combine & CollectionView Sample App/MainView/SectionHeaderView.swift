@@ -10,9 +10,12 @@ import UIKit
 
 final class SectionHeaderView: UICollectionReusableView {
     
-    static let reuseIdentifier = "SectionHeaderView"
+    // MARK: - Properties
     
+    static let reuseIdentifier = "SectionHeaderView"
     private let label = UILabel()
+    
+    //MARK: - Inits
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,6 +25,8 @@ final class SectionHeaderView: UICollectionReusableView {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    //MARK: - UI Functions
     
     func update(with userName: String){
         label.text = userName

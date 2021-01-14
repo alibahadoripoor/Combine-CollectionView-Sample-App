@@ -10,15 +10,21 @@ import Combine
 
 final class MainViewModel{
     
+    // MARK: - Properties
+    
     private var webService: WebService!
     private var cancellable: Set<AnyCancellable> = Set()
     var sectionViewModels: [SectionViewModel] = []
     var onShowError: (Error)->() = { _ in }
     var onUpdate: ()->() = {}
     
+    //MARK: - Inits
+    
     init(webService: WebService = WebService()){
         self.webService = webService
     }
+    
+    //MARK: - Fetching Data Functions
     
     func fetchData(){
         let usersPublisher = webService.fetchUsers()
